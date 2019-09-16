@@ -34,11 +34,6 @@ namespace Cinema
 
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Label3_Click(object sender, EventArgs e)
         {
             
@@ -49,9 +44,15 @@ namespace Cinema
             
         }
 
+
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBox1.SelectedIndex = new List<Salle>;
+            listBox1.Items.Add(lesSalles.ToString());
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -74,7 +74,7 @@ namespace Cinema
         public double tauxRemplissage()
         {
             int placeDispo = 0;
-            double tauxR = (nmbPlace / placeDispo) * 100;
+            double tauxR = (placeDispo / nmbPlace) * 100;
             return tauxR;
         }
 
