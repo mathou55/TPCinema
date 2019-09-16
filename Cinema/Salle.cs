@@ -69,5 +69,21 @@ namespace Cinema
             double caF = ca + ca2;
             return caF;
         }
+
+        public double tauxRemplissage()
+        {
+            int placeDispo = 0;
+            double tauxR = (nmbPlace / placeDispo) * 100;
+            return tauxR;
+        }
+
+        public string toString()
+        {
+            return "Film joué:" + titre +
+                "Nombre de places:" + nmbPlace +
+                "Prix d'une place:" + prixUnitaire +
+                + nmbPlaceTarifN + "places vendues au tarif normal,"
+                + nmbPlaceTarifR + "places vendues au tarif réduit.";
+        }
     }
 }
