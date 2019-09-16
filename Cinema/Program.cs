@@ -14,6 +14,7 @@ namespace Cinema
         [STAThread]
         static void Main()
         {
+            // Démarrage de la Form
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

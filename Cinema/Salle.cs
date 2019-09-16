@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cinema
 {
-    public class SalleCinema
+    class Salle
     {
         private string titre;
         private int nmbPlace;
@@ -14,7 +14,8 @@ namespace Cinema
         private int nmbPlaceTarifN = 0;
         private int nmbPlaceTarifR = 0;
 
-        public SalleCinema(string unTitre, int unNmbPLace, double unPrixUnitaire)
+        // Constructeur
+        public Salle(string unTitre, int unNmbPLace, double unPrixUnitaire)
         {
             this.titre = unTitre;
             this.nmbPlace = unNmbPLace;
@@ -51,7 +52,6 @@ namespace Cinema
             int placeDispo = nmbPlace - (nmbPlaceTarifN + nmbPlaceTarifR);
             return placeDispo;
         }
-        
 
-    } 
+    }
 }
