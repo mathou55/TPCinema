@@ -46,14 +46,28 @@ namespace Cinema
             {
                 if (tarifReduit == true)
                 {
-                    prixUnitaire = (prixUnitaire * 0.20);
+                    prixUnitaire = nbre * (prixUnitaire * 0.20);
                     return "Le prix est de" + prixUnitaire + " €";
                 }
                 else
                 {
+                    prixUnitaire = nbre * prixUnitaire;
                     return "Le prix est de" + prixUnitaire + " €";
                 }
             }
+        }
+
+        public void remiseAZero()
+        {
+            nmbPlace = 0;
+        }
+
+        public double chiffreAffaires()
+        {
+            double ca = prixUnitaire * nmbPlaceTarifN;
+            double ca2 = (prixUnitaire * nmbPlaceTarifR) * 0.20;
+            double caF = ca + ca2;
+            return caF;
         }
     }
 }
