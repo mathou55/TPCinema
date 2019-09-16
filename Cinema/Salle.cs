@@ -16,8 +16,9 @@ namespace Cinema
         private int nmbPlaceTarifR = 0;
 
         // Constructeur de Salle
-        public Salle(string unTitre, int unNmbPLace, double unPrixUnitaire)
+        public Salle(int unNumeroSalle,string unTitre, int unNmbPLace, double unPrixUnitaire)
         {
+            this.numeroSalle = unNumeroSalle;
             this.Titre = unTitre;
             this.NmbPlace = unNmbPLace;
             this.PrixUnitaire = unPrixUnitaire;
@@ -36,7 +37,7 @@ namespace Cinema
             return placeDispo;
         }
 
-        public void vendrePlaces(int nbre, bool tarifReduit)
+        public string vendrePlaces(int nbre, bool tarifReduit)
         {
             if (nbre > nmbPlace)
             {
@@ -79,11 +80,11 @@ namespace Cinema
 
         public string toString()
         {
-            return "Film joué:" + titre +
-                "Nombre de places:" + nmbPlace +
-                "Prix d'une place:" + prixUnitaire +
-                + nmbPlaceTarifN + "places vendues au tarif normal,"
-                + nmbPlaceTarifR + "places vendues au tarif réduit.";
+            return "Film joué:" + titre + 
+                "\n Nombre de places:" + nmbPlace +
+                "\n Prix d'une place:" + prixUnitaire +
+                "\n"+ nmbPlaceTarifN + " places vendues au tarif normal,\n"
+                + nmbPlaceTarifR + " places vendues au tarif réduit.";
         }
     }
 }
